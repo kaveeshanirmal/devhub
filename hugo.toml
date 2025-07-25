@@ -1,6 +1,6 @@
 baseURL = 'https://kaveeshanirmal.github.io/devhub'
 languageCode = 'en-us'
-title = 'Kaveesha Nirmal - Portfolio'
+title = 'Kaveesha Nirmal'
 theme = 'hugo-theme-stack'
 
 [pagination]
@@ -76,7 +76,7 @@ hasCJKLanguage = false
 [[menu.main]]
     identifier = 'about'
     name = 'About'
-    url = '/about/'
+    url = '/page/about/'
     weight = -90
     [menu.main.params]
         icon = 'user'

@@ -242,11 +242,6 @@ On the **Master node** (ks8-master VM), Do the following configurations.
 
     ![kubectl get nodes](i10.png "kubectl get nodes")
 
-```bash
-kubectl get pods -n kube-flannel
-kubectl get pods -n kube-system
-```
-
 -   Check details of nodes
     ![kubectl get nodes -o wide](i11.png "kubectl get nodes -o wide")
 
@@ -270,7 +265,6 @@ kubectl get pods -o wide
 ```
 
 ![test pod status](i15.png "test pod creation")
-
 
 ## Next Steps
 
