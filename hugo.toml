@@ -63,6 +63,9 @@ hasCJKLanguage = false
             local = false
             src = ''
 
+    [params.author]
+        name = "Kaveesha Nirmal"
+
 # Menu configuration
 [[menu.main]]
     identifier = 'home'

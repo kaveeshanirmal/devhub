@@ -1,8 +1,8 @@
 +++
-date = '2025-07-25T08:37:14+05:30'
 draft = false
 title = 'About'
 toc = false
+readingTime = false
 +++
 
 ---
@@ -54,8 +54,9 @@ I specialize in building scalable fullstack applications using modern frameworks
 I'm always excited to connect with people, share ideas, collaborate on new projects and discuss things. If you have anything in mind to share with me, I would love to hear from you!
 
 **Get in touch:**
-- 📧 Email: [kaveeshanirmal02@gmail.com](mailto:kaveeshanirmal02@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/kaveeshanirmal](https://linkedin.com/in/kaveeshanirmal)
-- 🐙 GitHub: [github.com/kaveeshanirmal](https://github.com/kaveeshanirmal)
+
+-   📧 Email: [kaveeshanirmal02@gmail.com](mailto:kaveeshanirmal02@gmail.com)
+-   💼 LinkedIn: [linkedin.com/in/kaveeshanirmal](https://linkedin.com/in/kaveeshanirmal)
+-   🐙 GitHub: [github.com/kaveeshanirmal](https://github.com/kaveeshanirmal)
 
 ---

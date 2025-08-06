@@ -2,7 +2,7 @@
 title: "Single-Node Kubernetes Cluster with Minikube"
 description: "Learn how to set up a local Kubernates cluster using Minikube"
 slug: minikube-setup
-date: 2025-07-24
+date: 2025-08-06
 draft: false
 image: minikubeCover.png
 imageAlt: "Kubernetes Cluster Setup"
@@ -19,7 +19,7 @@ tags:
 
 ## Introduction
 
-Ever wondered how to set up a local Kubernates cluster for development, testing or learning purposes? Minikube is the perfect option for you. With this tutorial I'm going to guide you through process of deploying a single node Kubernates cluster using Minikube.
+Ever wondered how to set up a local Kubernates cluster for development, testing or learning purposes? Minikube offers the easiest solution for that. With this tutorial I'm going to guide you through the process of deploying a single node Kubernates cluster using Minikube.
 
 ## What you'll need
 
