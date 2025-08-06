@@ -4,7 +4,7 @@ description: "A guide to creating a multi-node Kubernetes cluster using kubeadm 
 slug: kubernetes-cluster-setup
 date: 2025-07-24
 draft: false
-image: coverImage.png
+image: kubeadmCover.png
 imageAlt: "Kubernetes Cluster Setup"
 categories:
     - DevOps

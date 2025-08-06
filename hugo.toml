@@ -12,7 +12,7 @@ hasCJKLanguage = false
     mainSections = ['post', 'projects']
     featuredImageField = 'image'
     rssFullContent = true
-    favicon = '/favicon.ico'
+    favicon = 'favicon.ico'
 
     [params.footer]
         since = 2024
