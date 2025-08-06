@@ -2,7 +2,7 @@ baseURL = 'https://kaveeshanirmal.github.io/devhub'
 languageCode = 'en-us'
 title = 'Kaveesha Nirmal'
 theme = 'hugo-theme-stack'
-
+disqusShortname = "devhub-1"
 [pagination]
     pagerSize = 10
 
@@ -38,9 +38,6 @@ hasCJKLanguage = false
         [params.article.license]
             enabled = false
 
-    [params.comments]
-        enabled = false
-
     [params.widgets]
         homepage = [
             { type = 'search' },
@@ -65,6 +62,14 @@ hasCJKLanguage = false
 
     [params.author]
         name = "Kaveesha Nirmal"
+
+    [params.comments]
+        enabled = true
+        provider = "disqus"
+    
+    [params.page]
+        [params.page.comments]
+            enabled = true
 
 # Menu configuration
 [[menu.main]]
