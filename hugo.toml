@@ -72,7 +72,7 @@ enabled = true
 provider = "disqus"
 [params.page]
 [params.page.comments]
-enabled = true
+enabled = false
 
 # Menu configuration
 [[menu.main]]

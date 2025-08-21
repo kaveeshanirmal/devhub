@@ -6,6 +6,7 @@ date: 2025-07-24
 draft: false
 image: kubeadmCover.png
 imageAlt: "Kubernetes Cluster Setup"
+comments: true
 categories:
     - DevOps
     - Kubernetes

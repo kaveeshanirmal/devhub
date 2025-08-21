@@ -4,6 +4,7 @@ description: "Learn how to set up a local Kubernates cluster using Minikube"
 slug: minikube-setup
 date: 2025-08-06
 draft: false
+comments: true
 image: minikubeCover.png
 imageAlt: "Kubernetes Cluster Setup"
 categories:
@@ -37,7 +38,8 @@ Ever wondered how to set up a local Kubernates cluster for development, testing 
 Minikube needs a container runtime to run the Kubernates cluster. If you have already installed one, you can skip this step.
 
 -   Add Docker's GPG key
-    ``` bash
+
+    ```bash
     sudo apt-get update
     sudo apt-get install -y ca-certificates curl
 
@@ -48,7 +50,7 @@ Minikube needs a container runtime to run the Kubernates cluster. If you have al
 
 -   Add official repository
 
-    ``` bash
+    ```bash
     echo \
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
     $(. /etc/os-release && echo \"${UBUNTU_CODENAME:-$VERSION_CODENAME}\") stable" | \
@@ -59,13 +61,13 @@ Minikube needs a container runtime to run the Kubernates cluster. If you have al
 
 -   Install Docker packages
 
-    ``` bash
+    ```bash
     sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
 
 -   Add current user to the `docker` group so that you don't need `sudo` for Docker commands.
 
-    ``` bash
+    ```bash
     sudo usermod -aG docker $USER
     ```
 
@@ -73,7 +75,7 @@ Minikube needs a container runtime to run the Kubernates cluster. If you have al
 
 -   Download Minikube binary from the official repository and install.
 
-    ``` bash
+    ```bash
     curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-amd64
     sudo install minikube-linux-amd64 /usr/local/bin/minikube
     rm minikube-linux-amd64
@@ -81,7 +83,7 @@ Minikube needs a container runtime to run the Kubernates cluster. If you have al
 
 -   Start Minikube
 
-    ``` bash
+    ```bash
     minikube start
     ```
 
@@ -89,15 +91,16 @@ Minikube needs a container runtime to run the Kubernates cluster. If you have al
 
 ## Step 3: Install kubectl
 
-Install kubectl tool. 
+Install kubectl tool.
 
 > Note: This guide is for Linux. To see the installation process for other operating systems read this [documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/).
 
 -   Download the latest release binary
 
-    ``` bash
+    ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
     ```
+
 -   Install kubectl
 
     ```bash
@@ -107,17 +110,21 @@ Install kubectl tool.
 ## Step 4: Verify Cluster Creation
 
 -   View `kube-system` pods
+
     ```bash
     kubectl get pods -n kube-system
     ```
+
     You'll see an output similar to this.
 
     ![kube-system pods](i2.png "Kube-system pods")
 
 -   Access Minikube Dashboard
+
     ```
     minikube dashboard
     ```
+
     You'll see the kubernates dashboard opened in a browser window like below.
 
     ![Minikube Dashboard](i3.png "minikube dashboard")
@@ -128,6 +135,7 @@ Install kubectl tool.
     ```
 
 ## Useful Minikube Commands
+
 -   Stop the Minikube cluster:
     ```bash
     minikube stop
@@ -139,7 +147,7 @@ Install kubectl tool.
 -   Restart the Minikube cluster:
     ```bash
     minikube start
-    ``` 
+    ```
 -   Check the status of the Minikube cluster:
     ```bash
     minikube status
