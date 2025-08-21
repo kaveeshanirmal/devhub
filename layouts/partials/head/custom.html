@@ -1,0 +1,374 @@
+<!-- layouts/partials/head/custom.html -->
+<style>
+    /* GitHub-inspired Custom Theme Override */
+    :root {
+        /* GitHub Color Palette */
+        --gh-canvas-default: #ffffff;
+        --gh-canvas-subtle: #f6f8fa;
+        --gh-border-default: #d1d9e0;
+        --gh-border-muted: #d8dee4;
+        --gh-neutral-emphasis: #656d76;
+        --gh-neutral-muted: #656d76;
+        --gh-accent-emphasis: #0969da;
+        --gh-accent-fg: #0550ae;
+        --gh-success-emphasis: #1a7f37;
+        --gh-attention-emphasis: #9a6700;
+        --gh-danger-emphasis: #d1242f;
+        --gh-done-emphasis: #8250df;
+
+        /* GitHub Typography */
+        --gh-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI",
+            "Noto Sans", Helvetica, Arial, sans-serif;
+        --gh-font-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
+            Consolas, "Courier New", monospace;
+
+        /* Override original variables */
+        --main-top-padding: 24px;
+        --body-background: var(--gh-canvas-default);
+        --accent-color: var(--gh-accent-emphasis);
+        --accent-color-darker: var(--gh-accent-fg);
+        --accent-color-text: #ffffff;
+        --body-text-color: #1f2328;
+
+        --tag-border-radius: 6px;
+        --section-separation: 32px;
+        --scrollbar-thumb: var(--gh-border-default);
+        --scrollbar-track: var(--gh-canvas-subtle);
+
+        /* Card styling */
+        --card-background: var(--gh-canvas-default);
+        --card-background-selected: var(--gh-canvas-subtle);
+        --card-text-color-main: #1f2328;
+        --card-text-color-secondary: var(--gh-neutral-emphasis);
+        --card-text-color-tertiary: var(--gh-neutral-muted);
+        --card-separator-color: var(--gh-border-muted);
+        --card-border-radius: 12px;
+        --card-padding: 24px;
+
+        /* Typography */
+        --base-font-family: var(--gh-font-stack);
+        --code-font-family: var(--gh-font-mono);
+        --article-font-family: var(--gh-font-stack);
+        --article-font-size: 16px;
+        --article-line-height: 1.6;
+
+        /* Code and syntax highlighting */
+        --pre-background-color: var(--gh-canvas-subtle);
+        --pre-text-color: #1f2328;
+        --code-background-color: rgba(175, 184, 193, 0.2);
+        --code-text-color: #cf222e;
+
+        /* Links */
+        --link-background-color: 9, 105, 218;
+        --link-background-opacity: 0.1;
+        --link-background-opacity-hover: 0.15;
+
+        /* Shadows - GitHub-style */
+        --shadow-l1: 0 1px 3px rgba(16, 22, 26, 0.1),
+            0 1px 2px rgba(16, 22, 26, 0.1);
+        --shadow-l2: 0 3px 6px rgba(16, 22, 26, 0.15),
+            0 2px 4px rgba(16, 22, 26, 0.12);
+        --shadow-l3: 0 8px 24px rgba(16, 22, 26, 0.15),
+            0 2px 6px rgba(16, 22, 26, 0.1);
+        --shadow-l4: 0 16px 32px rgba(16, 22, 26, 0.15),
+            0 4px 16px rgba(16, 22, 26, 0.1);
+
+        /* Table styling */
+        --table-border-color: var(--gh-border-default);
+        --tr-even-background-color: var(--gh-canvas-subtle);
+
+        /* Blockquote */
+        --blockquote-border-size: 4px;
+        --blockquote-background-color: var(--gh-canvas-subtle);
+    }
+
+    /* Dark mode GitHub theme */
+    :root[data-scheme="dark"] {
+        --gh-canvas-default: #0d1117;
+        --gh-canvas-subtle: #161b22;
+        --gh-border-default: #30363d;
+        --gh-border-muted: #21262d;
+        --gh-neutral-emphasis: #7d8590;
+        --gh-neutral-muted: #656d76;
+        --gh-accent-emphasis: #2f81f7;
+        --gh-accent-fg: #58a6ff;
+        --gh-success-emphasis: #3fb950;
+        --gh-attention-emphasis: #d29922;
+        --gh-danger-emphasis: #f85149;
+        --gh-done-emphasis: #a5a5ff;
+
+        --body-background: var(--gh-canvas-default);
+        --accent-color: var(--gh-accent-emphasis);
+        --accent-color-darker: var(--gh-accent-fg);
+        --body-text-color: #e6edf3;
+
+        --card-background: var(--gh-canvas-subtle);
+        --card-background-selected: #21262d;
+        --card-text-color-main: #e6edf3;
+        --card-text-color-secondary: var(--gh-neutral-emphasis);
+        --card-text-color-tertiary: var(--gh-neutral-muted);
+        --card-separator-color: var(--gh-border-default);
+
+        --pre-background-color: #161b22;
+        --pre-text-color: #e6edf3;
+        --code-background-color: rgba(110, 118, 129, 0.4);
+        --code-text-color: #79c0ff;
+
+        --table-border-color: var(--gh-border-default);
+        --tr-even-background-color: var(--gh-canvas-subtle);
+        --blockquote-background-color: var(--gh-canvas-subtle);
+
+        --scrollbar-thumb: var(--gh-border-default);
+        --scrollbar-track: var(--gh-canvas-default);
+    }
+
+    /* Enhanced GitHub-style components */
+    .article-list {
+        gap: 16px;
+    }
+
+    .article-list article {
+        border: 1px solid var(--gh-border-default);
+        border-radius: var(--card-border-radius);
+        padding: var(--card-padding);
+        background: var(--card-background);
+        box-shadow: var(--shadow-l1);
+        transition: all 0.2s ease;
+    }
+
+    .article-list article:hover {
+        border-color: var(--gh-accent-emphasis);
+        box-shadow: var(--shadow-l2);
+        transform: translateY(-1px);
+    }
+
+    /* GitHub-style buttons */
+    .btn,
+    button {
+        font-family: var(--base-font-family);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        padding: 6px 16px;
+        border-radius: 6px;
+        border: 1px solid var(--gh-border-default);
+        background: var(--gh-canvas-default);
+        color: var(--card-text-color-main);
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .btn:hover,
+    button:hover {
+        background: var(--gh-canvas-subtle);
+        border-color: var(--gh-neutral-emphasis);
+    }
+
+    .btn-primary {
+        background: var(--gh-accent-emphasis);
+        border-color: var(--gh-accent-emphasis);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: var(--gh-accent-fg);
+        border-color: var(--gh-accent-fg);
+    }
+
+    /* GitHub-style tags */
+    .tag {
+        display: inline-block;
+        padding: 4px 8px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1;
+        border-radius: var(--tag-border-radius);
+        background: var(--gh-canvas-subtle);
+        color: var(--card-text-color-main);
+        border: 1px solid var(--gh-border-default);
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .tag:hover {
+        background: var(--gh-accent-emphasis);
+        color: white;
+        border-color: var(--gh-accent-emphasis);
+    }
+
+    /* Enhanced code blocks */
+    pre {
+        border: 1px solid var(--gh-border-default);
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px 0;
+        overflow-x: auto;
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    code:not(pre code) {
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 85%;
+        background: var(--code-background-color);
+        color: var(--code-text-color);
+        border: 1px solid var(--gh-border-muted);
+    }
+
+    /* GitHub-style blockquotes */
+    blockquote {
+        margin: 16px 0;
+        padding: 0 16px;
+        border-left: var(--blockquote-border-size) solid
+            var(--gh-border-default);
+        background: var(--blockquote-background-color);
+        border-radius: 0 6px 6px 0;
+    }
+
+    /* Enhanced tables */
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: 1px solid var(--table-border-color);
+        border-radius: 6px;
+        overflow: hidden;
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    th,
+    td {
+        padding: 8px 12px;
+        border-bottom: 1px solid var(--table-border-color);
+        text-align: left;
+    }
+
+    th {
+        background: var(--gh-canvas-subtle);
+        font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+        background: var(--tr-even-background-color);
+    }
+
+    /* GitHub-style alerts/callouts */
+    .alert {
+        padding: 12px 16px;
+        border-radius: 6px;
+        border: 1px solid;
+        margin: 16px 0;
+    }
+
+    .alert-info {
+        background: rgba(9, 105, 218, 0.1);
+        border-color: var(--gh-accent-emphasis);
+        color: var(--gh-accent-fg);
+    }
+
+    .alert-success {
+        background: rgba(26, 127, 55, 0.1);
+        border-color: var(--gh-success-emphasis);
+        color: var(--gh-success-emphasis);
+    }
+
+    .alert-warning {
+        background: rgba(154, 103, 0, 0.1);
+        border-color: var(--gh-attention-emphasis);
+        color: var(--gh-attention-emphasis);
+    }
+
+    .alert-danger {
+        background: rgba(209, 36, 47, 0.1);
+        border-color: var(--gh-danger-emphasis);
+        color: var(--gh-danger-emphasis);
+    }
+
+    /* Enhanced typography */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+        line-height: 1.25;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 24px;
+        border-bottom: 1px solid var(--gh-border-muted);
+        padding-bottom: 8px;
+    }
+    h3 {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 18px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 14px;
+        color: var(--gh-neutral-emphasis);
+    }
+
+    /* Links */
+    a {
+        color: var(--gh-accent-fg);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* GitHub-style focus states */
+    *:focus {
+        outline: 2px solid var(--gh-accent-emphasis);
+        outline-offset: 2px;
+    }
+
+    /* Enhanced scroll bars */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--scrollbar-track);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: var(--scrollbar-thumb);
+        border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--gh-neutral-emphasis);
+    }
+
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+        :root {
+            --card-padding: 16px;
+            --section-separation: 24px;
+        }
+    }
+
+    /* Print styles */
+    @media print {
+        :root {
+            --body-background: white;
+            --card-background: white;
+            --card-text-color-main: black;
+        }
+    }
+</style>

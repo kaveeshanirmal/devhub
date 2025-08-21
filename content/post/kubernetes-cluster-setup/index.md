@@ -266,10 +266,6 @@ kubectl get pods -o wide
 
 ![test pod status](i15.png "test pod creation")
 
-## Next Steps
-
-Now that you have a working Kubernetes cluster, Let's look at how we can deploy a simple web application in our cluster next.
-
 ## Conclusion
 
 Congratulations!, You now have a fully functional 3-node Kubernetes cluster running on VirtualBox. Feel free to join more control or worker nodes to this cluster if you need!

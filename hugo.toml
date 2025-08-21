@@ -1,131 +1,142 @@
 baseURL = 'https://kaveeshanirmal.github.io/devhub'
-languageCode = 'en-us'
-title = 'Kaveesha Nirmal'
-theme = 'hugo-theme-stack'
 disqusShortname = "devhub-1"
+languageCode = 'en-us'
+theme = 'hugo-theme-stack'
+title = 'Kaveesha Nirmal'
 [pagination]
-    pagerSize = 10
+pagerSize = 10
 
 hasCJKLanguage = false
 
 [params]
-    mainSections = ['post', 'projects']
-    featuredImageField = 'image'
-    rssFullContent = true
-    favicon = 'favicon.ico'
+favicon = 'favicon.ico'
+featuredImageField = 'image'
+mainSections = ['post', 'projects']
+rssFullContent = true
 
-    [params.footer]
-        since = 2024
-        customText = '© 2025 Kaveesha Nirmal. All rights reserved.'
+[params.colorScheme]
+default = "dark"
+toggle = true
 
-    [params.dateFormat]
-        published = 'Jan 02, 2006'
-        lastUpdated = 'Jan 02, 2006 15:04 MST'
+[params.footer]
+since = 2024
 
-    [params.sidebar]
-        subtitle = 'Computer Science Undergraduate | DevOps Enthusiast'
-        
-        [params.sidebar.avatar]
-            enabled = true
-            local = true
-            src = 'me.png'
+[params.dateFormat]
+lastUpdated = 'Jan 02, 2006 15:04 MST'
+published = 'Jan 02, 2006'
 
-    [params.article]
-        math = false
-        toc = true
-        readingTime = true
-        
-        [params.article.license]
-            enabled = false
+[params.sidebar]
 
-    [params.widgets]
-        homepage = [
-            { type = 'search' },
-            { type = 'archives', params = { limit = 5 } },
-            { type = 'categories', params = { limit = 10 } },
-            { type = 'tag-cloud', params = { limit = 10 } }
-        ]
-        page = [
-            { type = 'toc' }
-        ]
+subtitle = 'Computer Science Undergraduate | DevOps Enthusiast'
+[params.sidebar.avatar]
+enabled = true
+local = true
+src = 'me.png'
 
-    [params.opengraph]
-        [params.opengraph.twitter]
-            site = '@yourtwitterhandle'
-            card = 'summary_large_image'
+[params.article]
 
-    [params.defaultImage]
-        [params.defaultImage.opengraph]
-            enabled = false
-            local = false
-            src = ''
+math = false
+readingTime = true
+toc = true
+[params.article.license]
+enabled = false
 
-    [params.author]
-        name = "Kaveesha Nirmal"
+[params.widgets]
+homepage = [
+  {type = 'search'},
+  {type = 'archives', params = {limit = 5}},
+  {type = 'categories', params = {limit = 10}},
+  {type = 'tag-cloud', params = {limit = 10}},
+]
+page = [
+  {type = 'toc'},
+]
 
-    [params.comments]
-        enabled = true
-        provider = "disqus"
-    
-    [params.page]
-        [params.page.comments]
-            enabled = true
+[params.opengraph]
+[params.opengraph.twitter]
+card = 'summary_large_image'
+site = '@yourtwitterhandle'
+
+[params.defaultImage]
+[params.defaultImage.opengraph]
+enabled = false
+local = false
+src = ''
+
+[params.author]
+name = "Kaveesha Nirmal"
+
+[params.comments]
+
+enabled = true
+provider = "disqus"
+[params.page]
+[params.page.comments]
+enabled = true
 
 # Menu configuration
 [[menu.main]]
-    identifier = 'home'
-    name = 'Home'
-    url = '/'
-    weight = -100
-    [menu.main.params]
-        icon = 'home'
-        newTab = false
+identifier = 'home'
+name = 'Home'
+url = '/'
+weight = -100
+[menu.main.params]
+icon = 'home'
+newTab = false
 
 [[menu.main]]
-    identifier = 'about'
-    name = 'About'
-    url = '/page/about/'
-    weight = -90
-    [menu.main.params]
-        icon = 'user'
-        newTab = false
+identifier = 'about'
+name = 'About'
+url = '/page/about/'
+weight = -90
+[menu.main.params]
+icon = 'user'
+newTab = false
+
+# [[menu.main]]
+#     identifier = 'projects'
+#     name = 'Projects'
+#     url = '/projects/'
+#     weight = -80
+#     [menu.main.params]
+#         icon = 'code'
+#         newTab = false
 
 [[menu.main]]
-    identifier = 'projects'
-    name = 'Projects'
-    url = '/projects/'
-    weight = -80
-    [menu.main.params]
-        icon = 'code'
-        newTab = false
-
-[[menu.main]]
-    identifier = 'resume'
-    name = 'Resume'
-    url = '/resume/'
-    weight = -70
-    [menu.main.params]
-        icon = 'file'
-        newTab = false
+identifier = 'resume'
+name = 'Resume'
+url = '/page/resume/'
+weight = -70
+[menu.main.params]
+icon = 'file'
+newTab = false
 
 # Social menu
 [[menu.social]]
-    identifier = 'github'
-    name = 'GitHub'
-    url = 'https://github.com/kaveeshanirmal'
-    [menu.social.params]
-        icon = 'brand-github'
+identifier = 'github'
+name = 'GitHub'
+url = 'https://github.com/kaveeshanirmal'
+[menu.social.params]
+icon = 'brand-github'
 
 [[menu.social]]
-    identifier = 'linkedin'
-    name = 'LinkedIn'
-    url = 'https://linkedin.com/in/kaveeshanirmal'
-    [menu.social.params]
-        icon = 'brand-linkedin'
+identifier = 'linkedin'
+name = 'LinkedIn'
+url = 'https://linkedin.com/in/kaveeshanirmal'
+[menu.social.params]
+icon = 'brand-linkedin'
 
 [[menu.social]]
-    identifier = 'email'
-    name = 'Email'
-    url = 'mailto:kaveeshanirmal02@gmail.com'
-    [menu.social.params]
-        icon = 'mail'
+identifier = 'email'
+name = 'Email'
+url = 'mailto:kaveeshanirmal02@gmail.com'
+[menu.social.params]
+icon = 'mail'
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+# Optional: Suppress the warning if you want
+ignoreLogs = ['warning-goldmark-raw-html']
