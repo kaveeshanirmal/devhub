@@ -3,6 +3,7 @@ draft = false
 title = 'My Resume'
 toc = false
 readingTime = false
+comments = false
 +++
 
 <div class="resume-actions">
